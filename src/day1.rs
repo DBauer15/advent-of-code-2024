@@ -22,10 +22,10 @@ fn part1(input_file: &str) -> i32 {
 fn part2(input_file: &str) -> i32 {
     let lines = read_lines_in_file(input_file);
 
-    let mut leftlist = lines.iter().map(|item| 
+    let leftlist = lines.iter().map(|item| 
         item.split(' ').collect::<Vec<&str>>()[0].parse::<i32>().unwrap()
     ).collect::<Vec<i32>>();
-    let mut rightlist = lines.iter().map(|item| 
+    let rightlist = lines.iter().map(|item| 
         item.split(' ').collect::<Vec<&str>>().last().unwrap().parse::<i32>().unwrap()
     ).collect::<Vec<i32>>();
 
